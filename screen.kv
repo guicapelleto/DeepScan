@@ -1,0 +1,178 @@
+#:import utils kivy.utils
+<Espacador@Label>
+    size_hint: 1,None
+    height: dp(8)
+
+<ButtonList>
+    size_hint: 1, None
+    height: dp(60)
+
+<BoxRolagem>
+    orientation: 'vertical'
+    size_hint: 1, None
+    height: self.minimum_height
+
+<TelaOperacao>
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1, 1
+        ScrollView:
+            id: rolagem_principal
+            size_hint: 1, 0.43
+            do_scroll: True
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint:1, None
+                height: self.minimum_height
+                Label:
+                    text: 'Add folders to scan list'
+                    size_hint: 1, None
+                    height: dp(20)
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint: 1, None
+                    height: dp(60)
+                    TextInput:################FOLDER_TXT#################
+                        id: folder_txt
+                        hint_text: 'Insert a folder and add to the list'
+                    Button:
+                        size_hint: 0.05,1
+                        id: btn_exp_folder
+                        text: 'V'
+                        on_press: root.expand_folder_list()
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 0.2, 1
+                        Button:
+                            text: 'Remove'
+                            on_press: root.rem_folder()
+                        Button:
+                            text: 'Directory'
+                            on_press: root.show_dir()
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 0.05, 1
+                        Button:
+                            text: '+'
+                            on_press: root.add_folder()
+                        Button:
+                            text: '-'
+                            on_press: root.exclude_folder()
+                Espacador:
+                ScrollView:
+                    id: folders
+                    size_hint: 1, None
+                    height: dp(0)
+                    opacity: 0.2
+                    BoxRolagem:
+                        id: folder_box
+
+                Espacador:
+                Label:
+                    text: 'Add words to search'
+                    size_hint: 1, None
+                    height: dp(20)
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint: 1, None
+                    height: dp(60)
+                    TextInput:######################WORD TXT###################
+                        id: word_txt
+                        hint_text: 'Add words you want to seach'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 0.2, 1
+                        Button:
+                            id: btn_sensitive
+                            text: 'Sensitve OFF'
+                            on_press: root.turn_sensitive()
+                        Button:
+                            id: btn_exp_word
+                            text: 'V'
+                            on_press: root.expand_word_list()
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 0.1, 1
+                        Button:
+                            text: '+'
+                            on_press: root.add_word()
+                        Button:
+                            text: '-'
+                            on_press: root.rem_word()
+                Espacador:
+                ScrollView:
+                    id: words
+                    size_hint: 1, None
+                    height: dp(0)
+                    opacity: 0.2
+                    BoxRolagem:
+                        id: word_box
+                        orientation: 'vertical'
+        Espacador:
+        BoxLayout:
+            size_hint: 1, 0.05
+            orientation: 'horizontal'
+            Label:
+                id: total_files
+                text: ''
+            Label:
+                text: 'Results:'
+                id: lbl_results
+            Label:
+                id: total_time
+                text: ''
+        ProgressBar:
+            id: progresso
+            size_hint: 1, 0.02
+            max: 1
+            value: 0
+        TextInput:
+            size_hint: 1, 0.5
+            id: relatorio
+            readonly: True
+            disabled: False
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, 0.1
+            ButtonList:
+#                size_hint: 1, None
+#                height: dp(50)
+                id: stop_btn
+                text: 'STOP'
+                disabled: True
+                on_press: root.stop()
+            ButtonList:
+#                size_hint: 1, None
+#                height: dp(50)
+                id: start_btn
+                text: 'START'
+                disabled: False
+                on_press: root.start()
+            ButtonList:
+#                size_hint: 1, None
+#                height: dp(50)
+                text:'SAVE'
+                on_press: root.save_report()
+
+
+
+<Notification>
+    auto_dismiss: False
+    size_hint:1,None
+    height: dp(30)
+    background_color:0,0,0,0
+    overlay_color: 0,0,0,0 #'/Users/gui/Downloads/background-modal.png'
+#    pos_hint: {'x':0, 'top': 1 }
+
+    BoxLayout:
+        orientation: 'vertical'
+#        size_hint: 1, 0.1
+#        background_color: 0,0,0,0
+#        overlay_color: 0,0,0,0
+        Button:
+            id: alert
+            background_normal : ''
+            background_down : ''
+            background_color: utils.get_color_from_hex('#35f03b')
+            color: 1,1,1,1
+            text: 'teste'
