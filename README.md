@@ -28,9 +28,9 @@ Há um botão "V", onde expande a lista dos diretórios adicionados.
 
 Configurações de Busca
 Defina as palavras-chave que deseja buscar e adicione utilizando o botão de "+".
-Pode ativar o case-sensitive para buscar palavras exatas, ou deixar desabilitado (Padrão), onde não fará distinção de letras maiúsculas e minúsculas.
+Pode ativar o case sensitive para buscar palavras exatas, ou deixar desabilitado (Padrão), onde não fará distinção de letras maiúsculas e minúsculas.
 Botão "V" expande a lista de palavras-chaves que serão procuradas nos arquivos.
-Para fazer uma busca com mais de um conteúdo na mesma linha, pode se utilizar o .* onde entre uma palavra e outra irá ignorar o conteúdo entre as palavras. Ex: suponha uma linha "Existe uma casa verde no bosque ao lado", para fazer uma busca utilizando duas palavras que contenham na linha, podemos utilizar a palavra-chave como "casa.*bosque", onde irá procurar nos arquivos, todas as linhas que contenham a palavra casa e bosque consecultivamente.
+Para fazer uma busca com mais de um conteúdo na mesma linha, pode se utilizar o .* onde entre uma palavra e outra irá ignorar o conteúdo entre as palavras. Ex: suponha uma linha "Existe uma casa verde no bosque ao lado", para fazer uma busca utilizando duas palavras que contenham na linha, podemos utilizar a palavra-chave como "casa.*bosque", onde irá procurar nos arquivos, todas as linhas que contenham as palavras "casa" e "bosque" consecutivamente na mesma linha.
 
 Iniciando a Busca
 Clique no botão Start.
