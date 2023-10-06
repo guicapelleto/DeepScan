@@ -59,3 +59,6 @@ Se você deseja contribuir para este projeto, sinta-se à vontade para abrir pro
 Autor
 
 Guilherme Capelleto Restani
+
+<img width="1005" alt="Captura de Tela 2023-10-05 às 22 20 51" src="https://github.com/guicapelleto/DeepScan/assets/125845072/d69b7831-88e0-4869-a6a6-7934355842a7">
+
